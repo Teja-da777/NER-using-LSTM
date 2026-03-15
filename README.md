@@ -1,25 +1,30 @@
 # Named Entity Recognition
 
 ## AIM
-
 To develop an LSTM-based model for recognizing the named entities in the text.
 
 ## Problem Statement and Dataset
-
+Build a Named Entity Recognition (NER) model that can automatically identify and classify entities like names of people, locations, organizations, and other important terms from text. The goal is to tag each word in a sentence with its corresponding entity label.
 
 ## DESIGN STEPS
-
-### STEP 1:
-
-### STEP 2:
-
-### STEP 3:
-
-Write your own steps
+### STEP 1
+Import necessary libraries and set up the device (CPU or GPU).
+### STEP 2
+Load the NER dataset and fill missing values.
+### STEP 3
+Create word and tag dictionaries for encoding.
+### STEP 4
+Group words into sentences and encode them into numbers.
+### STEP 5
+Build a BiLSTM model for sequence tagging.
+### STEP 6
+Train the model using the training data.
+### STEP 7
+Evaluate the model performance on test data.
 
 ## PROGRAM
-### Name:
-### Register Number:
+### Name: THEJESWARAN M
+### Register Number: 212223240168
 ```python
 class BiLSTMTagger(nn.Module):
     def __init__(self, vocab_size, tagset_size, embedding_dim=50, hidden_dim=100):
@@ -59,8 +64,6 @@ def train_model(model, train_loader, test_loader, loss_fn, optimizer, epochs=3):
 
         model.train()
         total_loss = 0
-
-        
 
         for batch in train_loader:
 
@@ -109,9 +112,10 @@ def train_model(model, train_loader, test_loader, loss_fn, optimizer, epochs=3):
 ## OUTPUT
 
 ### Training Loss, Validation Loss Vs Iteration Plot
-![img]()
+![img](Screenshot (83).png)
 
 ### Sample Text Prediction
-
+![img](Screenshot (84).png)
 
 ## RESULT
+The BiLSTM NER model achieved good accuracy in identifying entities like persons, locations, and organizations. It showed strong performance on frequent tags, with scope for improvement on rarer ones.
